@@ -1,0 +1,41 @@
+<div class="container">
+
+  <form (ngSubmit)="doSubmitForm()">
+    <h2>Welcome to Farming</h2>
+
+        
+    <mat-form-field class="field" appearance="outline">
+        <mat-label>Id</mat-label>
+        <input name="id" [(ngModel)]="data.id" matInput>
+      </mat-form-field>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input name="name" [(ngModel)]="data.name" matInput>
+      </mat-form-field>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Addess</mat-label>
+        <input name="address" [(ngModel)]="data.address" matInput>
+      </mat-form-field>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Mobile Number</mat-label>
+        <input name="mobileNumber" [(ngModel)]="data.mobileNumber" matInput>
+      </mat-form-field>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Crops Rate</mat-label>
+        <input name="cropsRate" [(ngModel)]="data.cropsRate" matInput>
+      </mat-form-field>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>FarmingArea</mat-label>
+        <input name="farmingArea" [(ngModel)]="data.farmingArea" matInput>
+      </mat-form-field>
+      
+
+
+      <div class="text-center">
+          <button type="submit" mat-raised-button color="primary">Send</button>
+          <button type="reset" mat-raised-button color="accent">Reset</button>
+      </div>
+      </form>
+      {{data | json}}
+
+    </div>
